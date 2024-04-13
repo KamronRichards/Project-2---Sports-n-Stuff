@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Sports N' Stuff</a>
+            <a class="navbar-brand" href="index.html">Sports N' Stuff</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,16 +26,18 @@
                         <a class="nav-link" href="teams.html">Teams</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="subscription.html">Subscription</a>
+                        <a class="nav-link" href="subscription.html">Subscribe</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main role="main" class="container">
+    <main role="main" class="container flex-grow-1">
         <h2>Subscribe to Our Newsletter</h2>
         <p>Stay informed about the latest sports news, updates, and events by subscribing to our newsletter.</p>
+        <div class="row justify-content-center">
+                    <div class="card card-body my-2 col-12 col-md-6">
         <form>
             <div class="form-group">
                 <label for="name">Name</label>
@@ -76,11 +78,15 @@
             </div>
             <button type="submit" class="btn btn-primary">Subscribe</button>
         </form>
+        </div>
+        </div>
+
+
     </main>
 
-    <footer class="bg-dark text-light py-4">
-        <div class="container">
-            <div class="text-center">
+    <footer class="bg-dark container-fluid text-light py-4">
+        <div class="row justify-content-center">
+            <div class="text-center col-md-6 col-12 px-0">
                 <h5>Contact Us</h5>
                 <ul class="list-unstyled">
                     <li>Address: 123 Sports Street, City, Country</li>
@@ -88,7 +94,7 @@
                     <li>Email: info@SportsN'Stuff.com</li>
                 </ul>
             </div>
-            <div class="text-center mt-4">
+            <div class="text-center col-md-6 col-12 px-0">
                 <h5>Follow Us</h5>
                 <ul class="list-unstyled">
                     <li><a href="#" class="text-light">Facebook</a></li>
@@ -96,8 +102,9 @@
                     <li><a href="#" class="text-light">Instagram</a></li>
                 </ul>
             </div>
-            <hr class="my-4">
+            <div class="col-12 px-0">
             <p class="text-center">&copy; 2024 Sports N' Stuff. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
