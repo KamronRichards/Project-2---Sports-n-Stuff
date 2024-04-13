@@ -19,13 +19,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="games.html">Games</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="teams.html">Teams</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="subscription.html">Subscription</a>
                     </li>
                 </ul>
@@ -34,24 +34,48 @@
     </header>
 
     <main role="main" class="container">
-        <h2>Upcoming Games</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Game Title</h5>
-                        <p class="card-text">Date: <span class="text-muted">YYYY-MM-DD</span></p>
-                        <p class="card-text">Time: <span class="text-muted">HH:MM AM/PM</span></p>
-                        <p class="card-text">Location: <span class="text-muted">Stadium Name</span></p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button>
-                            </div>
-                        </div>
-                    </div>
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay informed about the latest sports news, updates, and events by subscribing to our newsletter.</p>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="sport">Favorite Sport</label>
+                <select class="form-control" id="sport">
+                    <option value="">Select your favorite sport</option>
+                    <option value="football">Football</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="soccer">Soccer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Update Preferences</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="updatePreferences" id="emailPreference" value="email" checked>
+                    <label class="form-check-label" for="emailPreference">
+                        Email
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="updatePreferences" id="textPreference" value="text">
+                    <label class="form-check-label" for="textPreference">
+                        Text Message
+                    </label>
                 </div>
             </div>
-        </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
     </main>
 
     <footer class="bg-dark text-light py-4">

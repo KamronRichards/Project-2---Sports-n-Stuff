@@ -3,9 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sports Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Sports Website</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="games.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="subscription.html">Subscription</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container">
+        <div class="jumbotron">
+            <h1>Welcome to Our Sports Website</h1>
+            <p class="lead">Stay updated with the latest sports news, scores, and updates.</p>
+            <a class="btn btn-primary btn-lg" href="games.html" role="button">View Games</a>
+            <a class="btn btn-secondary btn-lg" href="teams.html" role="button">View Teams</a>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="text-center">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li>Address: 123 Sports Street, City, Country</li>
+                    <li>Phone: +1 234 567 890</li>
+                    <li>Email: info@sportswebsite.com</li>
+                </ul>
+            </div>
+            <div class="text-center mt-4">
+                <h5>Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light">Facebook</a></li>
+                    <li><a href="#" class="text-light">Twitter</a></li>
+                    <li><a href="#" class="text-light">Instagram</a></li>
+                </ul>
+            </div>
+            <hr class="my-4">
+            <p class="text-center">&copy; 2024 Sports Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
