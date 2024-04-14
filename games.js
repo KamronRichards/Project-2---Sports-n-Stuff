@@ -1,3 +1,5 @@
+let games = new Set();
+
 fetch(
     "https://alnyb0ty3i.execute-api.us-east-1.amazonaws.com/sportsData"
 ).then((response) => {
@@ -10,7 +12,7 @@ function populatePage(data) {
     let gameslist = getGames(data)
     let gamesRow = document.getElementById("gamesRow");
     gameslist.forEach(x => {
-        gamesRow.innerHTML += createGameCard(x);
+        gamesRow.innerHTML += createGameCard(JSON.parse(x));
     });
 }
 
@@ -35,14 +37,19 @@ function createGameCard(gameData){
 }
 
 function getGames(data){
-    let games = new Set();
     const teamsArray = Object.keys(data);
     teamsArray.forEach(element => {
         let gamesArray = Object.keys(data[element]["last_five_games"]);
         gamesArray.forEach(x => {
-            games.add(data[element]["last_five_games"][x]);
+            addToSet(data[element]["last_five_games"][x]);
         });
     });
     console.log(games);
     return games;
 }
+
+function addToSet(obj) {
+    const serialized = JSON.stringify(obj);
+    games.add(serialized);
+  }
+  
