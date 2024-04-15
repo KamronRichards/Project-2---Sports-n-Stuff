@@ -1,5 +1,3 @@
-let games = new Set();
-
 fetch(
     "https://alnyb0ty3i.execute-api.us-east-1.amazonaws.com/sportsData"
 ).then((response) => {
@@ -7,6 +5,8 @@ fetch(
         populatePage(data);
     });
 });
+
+let games = new Set();
 
 function populatePage(data) {
     let gameslist = getGames(data)
@@ -33,7 +33,7 @@ function createGameCard(gameData){
                     </div>
                 </div>
             </div>
-    `
+    `;
 }
 
 function getGames(data){

@@ -1,4 +1,3 @@
-
 // Get the URL of the current page
 const url = new URL(window.location.href);
 
@@ -110,7 +109,8 @@ function teamInfoHtml(teamData){
 function rosterHtml(playerData){
   console.log(playerData);
   let output = `              <h4 class="card-title">Team Roster</h4>
-  <table class="table table-hover table-responsive">
+  <div class="table-responsive">
+  <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">Name</th>
@@ -138,7 +138,8 @@ function rosterHtml(playerData){
   </tr>
     `;});
   return output+=`</tbody>
-  </table>`;
+  </table>
+  </div>`;
 }
 
 function populateTeams(data) {

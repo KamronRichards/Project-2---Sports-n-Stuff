@@ -77,7 +77,7 @@ function createGameCard(gameData){
                     </div>
                 </div>
             </div>
-    `
+    `;
 }
 
 // Function to select 'num' elements at random from an array
