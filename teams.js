@@ -110,7 +110,7 @@ function teamInfoHtml(teamData){
 function rosterHtml(playerData){
   console.log(playerData);
   let output = `              <h4 class="card-title">Team Roster</h4>
-  <table class="table table-hover">
+  <table class="table table-hover table-responsive">
   <thead>
     <tr>
       <th scope="col">Name</th>
