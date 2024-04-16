@@ -160,7 +160,7 @@ function populateTeams(data) {
 function createTeamCard(teamName, teamRecord, teamLocation, teamAbbreviation) {
     return `
       <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
+        <div class="card mb-4 shadow">
           <div class="card-body">
             <h5 class="card-title">${teamName} - ${teamAbbreviation}</h5>
             <p class="card-text">Season Record: <span class="text-muted">${teamRecord}</span></p>
