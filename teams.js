@@ -19,6 +19,7 @@ fetch("https://alnyb0ty3i.execute-api.us-east-1.amazonaws.com/sportsData").then(
 });
 
 function populatePage(teamName, data) {
+
     if (teamName) {
         populateTeamPage(teamName, data);
     } else {
@@ -30,7 +31,7 @@ function populateTeamPage(teamName, data) {
     const teamData = data[teamName];
     console.log(teamData);
     document.getElementById("pageTitle").innerHTML = `${teamName} - ${teamData["abbreviation"]}`;
-    document.getElementById("teams").innerHTML += createTeamInfoPage(teamData);
+    document.getElementById("teams").innerHTML = createTeamInfoPage(teamData);
     document.getElementById("teamInfo").innerHTML += teamInfoHtml(teamData);
     document.getElementById("lastFiveGames").innerHTML += lastFiveGamesHtml(teamData["last_five_games"]);
     document.getElementById("teamRoster").innerHTML += rosterHtml(teamData["roster"]);
@@ -145,6 +146,8 @@ function rosterHtml(playerData){
 function populateTeams(data) {
 
     document.getElementById("pageTitle").innerHTML = "Teams";
+
+    document.getElementById("teams").innerHTML = "";
     // Extract the team names (keys) from the object
     const teamNames = Object.keys(data);
 
