@@ -14,17 +14,14 @@ html {
 }
 
 .jumbotron {
-    text-align: center;
+    position: relative;
 }
 
-.carousel-inner img {
-    max-width: 600px; 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-}
-
-.carousel {
-    margin-top: 10px; 
-    padding-left: 60px;
-}
-
+    height: 100%;
+    background: linear-gradient(0deg, rgba(29,66,138,1) 0%, rgba(29,66,138,0) 65%);
+  }
