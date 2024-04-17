@@ -143,38 +143,41 @@ function rosterHtml(playerData){
   </div>`;
 }
 
+// Function to populate teams on the main page
 function populateTeams(data) {
-
     document.getElementById("pageTitle").innerHTML = "Teams";
-
     document.getElementById("teams").innerHTML = "";
-    // Extract the team names (keys) from the object
+
     const teamNames = Object.keys(data);
 
-    count = 1;
-    teamNames.forEach(element => {
-        console.log(data[element]);
-        document.getElementById("teams").innerHTML += createTeamCard(element, data[element]["current_record"], data[element]["location"], data[element]["abbreviation"]);
-        count++;
+    teamNames.forEach(teamName => {
+        const teamData = data[teamName];
+        const logoUrl = teamData["logo_light"];
+        document.getElementById("teams").innerHTML += createTeamCard(teamName, teamData["current_record"], teamData["location"], teamData["abbreviation"], logoUrl);
     });
 }
 
 // Function to create a team card element
-function createTeamCard(teamName, teamRecord, teamLocation, teamAbbreviation) {
+function createTeamCard(teamName, teamRecord, teamLocation, teamAbbreviation, logoUrl) {
     return `
       <div class="col-md-4">
-        <div class="card mb-4 shadow">
-          <div class="card-body">
-            <h5 class="card-title">${teamName} - ${teamAbbreviation}</h5>
-            <p class="card-text">Season Record: <span class="text-muted">${teamRecord}</span></p>
-            <p class="card-text">Location: <span class="text-muted">${teamLocation}</span></p>
-            <div class="d-flex justify-content-between align-items-center">
+        <div class="card">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="card-body">
+              <h5 class="card-title">${teamName} - ${teamAbbreviation}</h5>
+              <p class="card-text">Season Record: <span class="text-muted">${teamRecord}</span></p>
+              <p class="card-text">Location: <span class="text-muted">${teamLocation}</span></p>
               <div class="btn-group">
                 <a type="button" class="btn btn-sm btn-outline-secondary" href="/teams.html?name=${teamName}">More Info</a>
               </div>
+            </div>
+            <div class="logo-wrapper">
+              <img src="${logoUrl}" class="card-img-top logo-img" alt="${teamName} Logo">
             </div>
           </div>
         </div>
       </div>
     `;
-  }
+}
+
+

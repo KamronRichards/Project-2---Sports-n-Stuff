@@ -63,7 +63,7 @@ function getGames(data){
 function createGameCard(gameData){
     return `
             <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
+                <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">${gameData["game_title"]}</h5>
                         <p class="card-text">Date: <span class="text-muted">${gameData["game_date"]}</span></p>
