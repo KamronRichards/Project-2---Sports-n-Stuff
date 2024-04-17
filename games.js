@@ -11,6 +11,7 @@ let games = new Set();
 function populatePage(data) {
     let gameslist = getGames(data)
     let gamesRow = document.getElementById("gamesRow");
+    gamesRow.innerHTML = "";
     gameslist.forEach(x => {
         gamesRow.innerHTML += createGameCard(JSON.parse(x));
     });
