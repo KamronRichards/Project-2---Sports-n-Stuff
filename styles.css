@@ -78,6 +78,21 @@ h4 {
   letter-spacing: 1px; 
 }
 
+.translate-animation {
+  animation: translateAnimation 2s infinite alternate; 
+  position: relative; 
+}
+
+@keyframes translateAnimation {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 50px; 
+  }
+}
+
+
 
 
 
