@@ -40,7 +40,7 @@
         <p>Stay informed about the latest sports news, updates, and events by subscribing to our newsletter.</p>
         <div class="row justify-content-center">
                     <div class="card card-body my-2 col-12 col-md-6">
-        <form>
+        <form id="subscriptionForm">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" class="form-control" id="name" placeholder="Enter your name">
@@ -137,6 +137,33 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="subscriptionModalLabel">Subscription Confirmation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Are you sure you want to subscribe?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary" id="confirmSubscription">Yes</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+    document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        var subscriptionModal = new bootstrap.Modal(document.getElementById('subscriptionModal'));
+        subscriptionModal.show();
+    });
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
