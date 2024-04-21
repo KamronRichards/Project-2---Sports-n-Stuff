@@ -168,7 +168,7 @@ function createTeamCard(teamName, teamRecord, teamLocation, teamAbbreviation, lo
               <p class="card-text">Season Record: <span class="text-muted">${teamRecord}</span></p>
               <p class="card-text">Location: <span class="text-muted">${teamLocation}</span></p>
               <div class="btn-group">
-                <a type="button" class="btn btn-sm btn-outline-secondary" href="/teams.html?name=${teamName}">More Info</a>
+                <a type="button" class="btn btn-sm btn-outline-secondary" href="teams.html?name=${teamName}">More Info</a>
               </div>
             </div>
             <div class="logo-wrapper">

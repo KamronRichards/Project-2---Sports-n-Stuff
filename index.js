@@ -30,7 +30,7 @@ function populateTeams(data) {
         document.getElementById("teamName" + count).innerHTML = element + " - " + data[element]["abbreviation"];
         document.getElementById("teamRecord" + count).innerHTML = data[element]["current_record"];
         document.getElementById("teamLocation" + count).innerHTML = data[element]["location"];
-        document.getElementById("moreDetails" + count).innerHTML = `<a type="button" class="btn btn-sm btn-outline-secondary" href="/teams.html?name=${element}">More Info</a>`;
+        document.getElementById("moreDetails" + count).innerHTML = `<a type="button" class="btn btn-sm btn-outline-secondary" href="teams.html?name=${element}">More Info</a>`;
 
         console.log(data[element]["location"])
 
